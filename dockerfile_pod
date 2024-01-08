@@ -1,0 +1,16 @@
+# Use the updated base CUDA image
+FROM runpod/pytorch:2.1.1-py3.10-cuda12.1.1-devel-ubuntu22.04
+
+WORKDIR /app
+
+# Best practices for minimizing layer size and avoiding cache issues
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ffmpeg && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir torch==2.1.2 torchvision torchaudio xformers audiocraft firebase-rest-api==1.11.0 noisereduce==3.0.0 runpod
+
+COPY preloadModel.py /app/preloadModel.py
+COPY handler.py /app/handler.py
+COPY suprepo /app/suprepo
+
+RUN python /app/preloadModel.py

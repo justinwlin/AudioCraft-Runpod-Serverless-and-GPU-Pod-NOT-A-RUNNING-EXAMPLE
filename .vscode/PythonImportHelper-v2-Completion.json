@@ -1,0 +1,115 @@
+[
+    {
+        "label": "runpod",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpod",
+        "description": "runpod",
+        "detail": "runpod",
+        "documentation": {}
+    },
+    {
+        "label": "torchaudio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchaudio",
+        "description": "torchaudio",
+        "detail": "torchaudio",
+        "documentation": {}
+    },
+    {
+        "label": "AudioGen",
+        "importPath": "audiocraft.models",
+        "description": "audiocraft.models",
+        "isExtraImport": true,
+        "detail": "audiocraft.models",
+        "documentation": {}
+    },
+    {
+        "label": "AudioGen",
+        "importPath": "audiocraft.models",
+        "description": "audiocraft.models",
+        "isExtraImport": true,
+        "detail": "audiocraft.models",
+        "documentation": {}
+    },
+    {
+        "label": "audio_write",
+        "importPath": "audiocraft.data.audio",
+        "description": "audiocraft.data.audio",
+        "isExtraImport": true,
+        "detail": "audiocraft.data.audio",
+        "documentation": {}
+    },
+    {
+        "label": "audio_write",
+        "importPath": "audiocraft.data.audio",
+        "description": "audiocraft.data.audio",
+        "isExtraImport": true,
+        "detail": "audiocraft.data.audio",
+        "documentation": {}
+    },
+    {
+        "label": "firebase",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "firebase",
+        "description": "firebase",
+        "detail": "firebase",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "noisereduce",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "noisereduce",
+        "description": "noisereduce",
+        "detail": "noisereduce",
+        "documentation": {}
+    },
+    {
+        "label": "handler",
+        "kind": 2,
+        "importPath": "handler",
+        "description": "handler",
+        "peekOfCode": "def handler(event):\n    # Extract job input from the event\n    job_input = event[\"input\"]\n    firebaseManagerConfig = job_input.get(\"config\", {})\n    description = job_input.get(\n        \"description\", \"\"\n    )  # Provide a default description if not present\n    audio_generation_time = job_input.get(\n        \"audio_generation_time\", 5\n    )  # Provide a default audio_generation_time if not present",
+        "detail": "handler",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "preloadModel",
+        "description": "preloadModel",
+        "peekOfCode": "model = AudioGen.get_pretrained('facebook/audiogen-medium')",
+        "detail": "preloadModel",
+        "documentation": {}
+    }
+]
